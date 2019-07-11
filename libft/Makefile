@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: ysharma <marvin@42.fr>                     +#+  +:+       +#+         #
+#    By: skynet <skynet@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/05/28 09:02:46 by ysharma           #+#    #+#              #
-#    Updated: 2019/06/12 15:27:44 by ysharma          ###   ########.fr        #
+#    Updated: 2019/07/11 09:52:27 by skynet           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -22,7 +22,8 @@ SRC = ft_atoi.c ft_bzero.c ft_isalnum.c ft_isalpha.c ft_isascii.c \
 	  ft_striteri.c ft_strmap.c ft_strmapi.c ft_strequ.c ft_strnequ.c \
 	  ft_strsub.c ft_strjoin.c ft_strtrim.c ft_strsplit.c ft_itoa.c \
 	  ft_putchar.c ft_putstr.c ft_putendl.c ft_putnbr.c ft_putchar_fd.c \
-	  ft_putstr_fd.c ft_putendl_fd.c ft_putnbr_fd.c
+	  ft_putstr_fd.c ft_putendl_fd.c ft_putnbr_fd.c get_next_line.c ft_lstnew.c \
+	  ft_lstadd.c
 
 
 OBJ = $(SRC:%.c=%.o)

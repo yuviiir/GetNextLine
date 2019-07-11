@@ -3,18 +3,34 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ysharma <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: skynet <skynet@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/28 09:43:23 by ysharma           #+#    #+#             */
-/*   Updated: 2019/06/25 18:47:09 by root             ###   ########.fr       */
+/*   Updated: 2019/07/11 09:53:45 by skynet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
+# define BUFF_SIZE 32
+
+# include <sys/types.h>
+# include <sys/stat.h>
+# include <fcntl.h>
 # include <stdlib.h>
 # include <unistd.h>
 # include <string.h>
+
+typedef struct	s_list
+{
+	void *content;
+	struct s_list *next;
+	struct s_list *prev;
+}				t_list;
+
+void	ft_lstadd(t_list **head, t_list *link);
+
+t_list	*ft_lstnew(void *content, size_t size);
 
 int		ft_atoi(const char *str);
 
@@ -119,5 +135,7 @@ char	*ft_strsub(char const *s, unsigned int start, size_t len);
 char	*ft_strtrim(char const *s);
 
 char	**ft_strsplit(char const *s, char c);
+
+int		get_next_line(const int fd, char **line);
 
 #endif
